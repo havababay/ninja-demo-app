@@ -1,0 +1,11 @@
+<h2>Candidate</h2>
+
+<div *ngFor="let candidate of candidates">
+  <h3>
+    <a [title]="candidate.name + ' details'" [routerLink]="['/candidate', candidate.id]">
+      {{ candidate.name }}
+    </a>
+  </h3>
+</div>
+
+<img src="https://raw.githubusercontent.com/havababay/ninja-demo-app/master/src/assets/images/ninja-1138493_1920.png">
