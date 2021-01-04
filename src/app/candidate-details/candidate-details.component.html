@@ -1,5 +1,30 @@
 <h2>Candidate Details</h2>
 
 <div *ngIf="candidate">
-  <h3>{{ candidate.name }}</h3>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [value]="candidate.name">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Born</mat-label>
+      <input matInput [matDatepicker]="picker" [value]="candidate.born">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Height</mat-label>
+      <input matInput [value]="candidate.height" type="number">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Weight</mat-label>
+      <input matInput [value]="candidate.weight" type="number">
+    </mat-form-field>
+  </p>
 </div>
