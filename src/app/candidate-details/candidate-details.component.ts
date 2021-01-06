@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { candidates } from '../candidates';
+import { candidates } from '../data/candidates';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

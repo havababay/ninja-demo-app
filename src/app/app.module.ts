@@ -9,6 +9,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { MaterialModule } from './material.module';
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
 import { CandidateDetailsComponent } from './candidate-details/candidate-details.component';
+import { ShowListComponent } from './show-list/show-list.component';
+import { ShowDetailsComponent } from './show-details/show-details.component';
 
 @NgModule({
   imports: [
@@ -20,6 +22,8 @@ import { CandidateDetailsComponent } from './candidate-details/candidate-details
       { path: '', component: CandidateListComponent },
       { path: 'candidates', component: CandidateListComponent },
       { path: 'candidate/:candidateId', component: CandidateDetailsComponent },
+      { path: 'shows', component: ShowListComponent },
+      { path: 'show/:showId', component: ShowDetailsComponent },
     ])
   ],
   declarations: [
@@ -27,6 +31,9 @@ import { CandidateDetailsComponent } from './candidate-details/candidate-details
     TopBarComponent,
     CandidateListComponent,
     CandidateDetailsComponent,
+    ShowListComponent,
+    ShowDetailsComponent
+
   ],
   bootstrap: [ AppComponent ]
 })

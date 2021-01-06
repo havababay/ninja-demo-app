@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { candidates } from '../candidates';
+import { candidates } from '../data/candidates';
 
 @Component({
   selector: 'app-candidate-list',

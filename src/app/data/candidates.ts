@@ -25,5 +25,14 @@ export const candidates = [
     born: new Date("17/02/1982"),
     weight: 178,
     height: 72, 
+  },
+  {
+    id: 4,
+    name: 'Donald Trump',
+    age: 18,
+    job: 'Mechanical Engineer',
+    born: new Date("16/03/1982"),
+    weight: 185,
+    height: 78, 
   }
 ];

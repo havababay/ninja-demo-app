@@ -10,5 +10,9 @@ export const obstacles = [
   {
     id: 3,
     name: 'Warped Wall',
+  },
+  {
+    id: 4,
+    name: 'Swing Circle',
   }
 ];
