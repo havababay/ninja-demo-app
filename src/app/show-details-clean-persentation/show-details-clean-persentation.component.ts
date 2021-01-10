@@ -7,6 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ShowDetailsCleanPersentationComponent implements OnInit {
   @Input() show: any;
+  @Input() showCandidates: any;
+  @Input() showObstacles: any;
+  @Input() showResults: any;
 
   constructor() { }
 

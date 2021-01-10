@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+  <mat-label>Candidate</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let candidate of candidates" [value]="candidate.id">
+      {{ candidate.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

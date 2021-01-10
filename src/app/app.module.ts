@@ -13,6 +13,7 @@ import { ShowListComponent } from './show-list/show-list.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { ShowDetailsCleanComponent } from './show-details-clean/show-details-clean.component';
 import { ShowDetailsCleanPersentationComponent } from './show-details-clean-persentation/show-details-clean-persentation.component';
+import { CandidateSelectorComponent } from './candidate-selector/candidate-selector.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ShowDetailsCleanPersentationComponent } from './show-details-clean-pers
     ShowListComponent,
     ShowDetailsComponent,
     ShowDetailsCleanComponent,  
-    ShowDetailsCleanPersentationComponent
+    ShowDetailsCleanPersentationComponent,
+    CandidateSelectorComponent
   ],
   bootstrap: [ AppComponent ]
 })
