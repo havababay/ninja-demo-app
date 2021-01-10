@@ -1,10 +1,46 @@
 
 <h2>{{ show.name }}</h2>
 
+<mat-tab-group>
+  <mat-tab label="Ranking">
+      <div *ngFor="let candidateResult of showResults.candidates">
+        <h3 [ngClass]="{'not-passed-candidate': candidateResult.rank > show.passed}">
+            {{ candidateResult.rank }}
+            <img class="small-image" src="https://raw.githubusercontent.com/havababay/ninja-demo-app/master/src/assets/images/ninja-1138493_1920.png">
+            {{ getCandidate(candidateResult.candidate).name }}
+            <div *ngIf="candidateResult.results[0].obstacle == 3" class="finished">Finished</div>
+            <div *ngIf="candidateResult.results[0].obstacle != 3" class="failed">
+              {{ getObstacle(candidateResult.results[0].obstacle).name }}
+            </div>
+            {{ candidateResult.total_time }}
+        </h3>
+      </div>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>Enter Data</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Candidate</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let candidateId of show.candidates" [value]="candidateId">
+            {{ getCandidate(candidateId).name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div *ngFor="let obstacleId of show.obstacles">
+        {{ getObstacle(obstacleId).name }}
+        <mat-form-field appearance="fill">
+          <mat-label>Start Time</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Status</mat-label>
+          <mat-select>
+            <mat-option value="success">Success</mat-option>
+            <mat-option value="failed">Failed</mat-option>
+            <mat-option value="disqualified">Disqualified</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  </mat-tab>
+</mat-tab-group>
 
-<h3>Ranking</h3>
-<div *ngFor="let candidateResult of showResults.candidates">
-  <h3>
-      {{ candidateResult.candidate }}
-  </h3>
-</div>

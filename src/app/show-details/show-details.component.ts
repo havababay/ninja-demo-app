@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { candidates } from '../data/candidates';
+import { obstacles } from '../data/obstacles';
 import { shows } from '../data/shows';
 import { showResultsCollection } from '../data/show-results';
 
@@ -26,5 +28,17 @@ export class ShowDetailsComponent implements OnInit {
   this.showResults = showResultsCollection.find(showResults => {
     return showResults.show === Number(showIdFromRoute);
   });
+  }
+
+  getCandidate(candidateId: any):any {
+    return candidates.find(candidate => {
+      return candidate.id === Number(candidateId);
+    });
+  }
+
+  getObstacle(obstacleId: any):any {
+    return obstacles.find(obstacle => {
+      return obstacle.id === Number(obstacleId);
+    });
   }
 }

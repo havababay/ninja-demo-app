@@ -1,0 +1,11 @@
+.not-passed-candidate {
+  background-color: gray; 
+}
+
+.finished {
+  background-color: gold; 
+}
+
+.failed {
+  background-color: red; 
+}
