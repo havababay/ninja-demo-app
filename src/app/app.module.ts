@@ -12,6 +12,8 @@ import { CandidateDetailsComponent } from './candidate-details/candidate-details
 import { ShowListComponent } from './show-list/show-list.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { ShowDetailsCleanComponent } from './show-details-clean/show-details-clean.component';
+import { ShowDetailsCleanPersentationComponent } from './show-details-clean-persentation/show-details-clean-persentation.component';
+
 
 @NgModule({
   imports: [
@@ -36,6 +38,7 @@ import { ShowDetailsCleanComponent } from './show-details-clean/show-details-cle
     ShowListComponent,
     ShowDetailsComponent,
     ShowDetailsCleanComponent,  
+    ShowDetailsCleanPersentationComponent
   ],
   bootstrap: [ AppComponent ]
 })
