@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DurationPickerComponent implements OnInit {
   @Input() duration:string;
+  @Input() label:string;
 
   constructor() { }
 

@@ -6,19 +6,7 @@
   <mat-tab label="Enter Data">
     <app-candidate-selector [candidates]="showCandidates"></app-candidate-selector>
     <div *ngFor="let obstacle of showObstacles">
-      {{ obstacle.name }}
-      <!--<mat-form-field appearance="fill">
-        <mat-label>Start Time</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Status</mat-label>
-        <mat-select>
-          <mat-option value="success">Success</mat-option>
-          <mat-option value="failed">Failed</mat-option>
-          <mat-option value="disqualified">Disqualified</mat-option>
-        </mat-select>
-      </mat-form-field>-->
+      <app-obstacle-result [obstacle]="obstacle"></app-obstacle-result>
     </div>
   </mat-tab>
 <mat-tab>

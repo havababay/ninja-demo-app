@@ -14,6 +14,8 @@ import { ShowDetailsComponent } from './show-details/show-details.component';
 import { ShowDetailsCleanComponent } from './show-details-clean/show-details-clean.component';
 import { ShowDetailsCleanPersentationComponent } from './show-details-clean-persentation/show-details-clean-persentation.component';
 import { CandidateSelectorComponent } from './candidate-selector/candidate-selector.component';
+import { DurationPickerComponent } from './duration-picker/duration-picker.component';
+import { ObstacleResultComponent } from './obstacle-result/obstacle-result.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { CandidateSelectorComponent } from './candidate-selector/candidate-selec
     ShowDetailsComponent,
     ShowDetailsCleanComponent,  
     ShowDetailsCleanPersentationComponent,
-    CandidateSelectorComponent
+    CandidateSelectorComponent,
+    DurationPickerComponent,
+    ObstacleResultComponent
   ],
   bootstrap: [ AppComponent ]
 })
