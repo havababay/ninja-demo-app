@@ -1,14 +1,19 @@
-<div>
-	{{ obstacle.name }}
-	Start Time: <app-duration-picker></app-duration-picker>
-	End Time: <app-duration-picker></app-duration-picker>
-	<br/>
-  Status:
-	<mat-form-field appearance="fill">
-		<mat-select>
-			<mat-option value="success">Success</mat-option>
-			<mat-option value="failed">Failed</mat-option>
-			<mat-option value="disqualified">Disqualified</mat-option>
-		</mat-select>
-	</mat-form-field>
+<div class="obstacle-result-cell">
+	<div class="obstacle-name">
+    <b>{{ obstacle.name }}</b>
+  </div>
+  <div>
+    Started at:
+    <app-duration-picker></app-duration-picker>
+    Ended at: <app-duration-picker></app-duration-picker>
+    <br/>
+    Status:
+    <mat-form-field appearance="fill">
+      <mat-select>
+        <mat-option value="success">Success</mat-option>
+        <mat-option value="failed">Failed</mat-option>
+        <mat-option value="disqualified">Disqualified</mat-option>
+      </mat-select>
+    </mat-form-field>
+	</div>
 </div>
