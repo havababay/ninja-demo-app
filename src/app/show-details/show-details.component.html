@@ -18,7 +18,7 @@
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>Enter Data</ng-template>
-      <mat-form-field appearance="fill">
+      <mat-form-field>
         <mat-label>Candidate</mat-label>
         <mat-select>
           <mat-option *ngFor="let candidateId of show.candidates" [value]="candidateId">
@@ -26,20 +26,33 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
+      <h2>{{ show.name }} Obstacles</h2>
       <div *ngFor="let obstacleId of show.obstacles">
-        {{ getObstacle(obstacleId).name }}
-        <mat-form-field appearance="fill">
-          <mat-label>Start Time</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Status</mat-label>
-          <mat-select>
-            <mat-option value="success">Success</mat-option>
-            <mat-option value="failed">Failed</mat-option>
-            <mat-option value="disqualified">Disqualified</mat-option>
-          </mat-select>
-        </mat-form-field>
+        <div class="obstacle-result-cell">
+          <div class="obstacle-name">
+            <b>{{ getObstacle(obstacleId).name }}</b>
+          </div>
+          <div>
+            Started at:
+            <mat-form-field>
+              <input matInput>
+            </mat-form-field>
+            Ended at:
+            <mat-form-field>
+              <input matInput>
+            </mat-form-field>
+            <br/>
+            Completed with:
+            <mat-form-field>
+              <mat-label>status</mat-label>
+              <mat-select>
+                <mat-option value="success">Success</mat-option>
+                <mat-option value="failed">Failure</mat-option>
+                <mat-option value="disqualified">Disqualification</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
       </div>
   </mat-tab>
 </mat-tab-group>

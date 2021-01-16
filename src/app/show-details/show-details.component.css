@@ -9,3 +9,14 @@
 .failed {
   background-color: red; 
 }
+
+.obstacle-result-cell {
+  box-shadow: 0 1px 1px rgba(60, 64, 67, 0.3), 0 1px 3px rgba(60, 64, 67, 0.15);
+  margin: 10px;
+  display: flex;
+}
+
+.obstacle-name {
+  padding-top: 20px;
+  padding-right: 8px;
+}
