@@ -5,6 +5,7 @@
   </mat-tab>
   <mat-tab label="Enter Data">
     <app-candidate-selector [candidates]="showCandidates"></app-candidate-selector>
+    <h2>{{show.name}} Obstacles</h2>
     <div *ngFor="let obstacle of showObstacles">
       <app-obstacle-result [obstacle]="obstacle"></app-obstacle-result>
     </div>
